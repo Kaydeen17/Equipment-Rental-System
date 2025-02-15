@@ -7,9 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class LoginPage extends JFrame {
-    /**
-	 * 
-	 */
+ 
 	private static final long serialVersionUID = 1L;
 	private JTextField emailField;
     private JPasswordField passwordField;

@@ -4,9 +4,7 @@ package com.applictation.view;
 import javax.swing.*;
 
 public class UserDashboard extends JFrame {
-    /**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 
 	public UserDashboard() {

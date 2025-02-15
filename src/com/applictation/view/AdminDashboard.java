@@ -3,11 +3,7 @@ package com.applictation.view;
 import javax.swing.*;
 
 public class AdminDashboard extends JFrame {
-	
-	
-    /**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 
 	public AdminDashboard() {
