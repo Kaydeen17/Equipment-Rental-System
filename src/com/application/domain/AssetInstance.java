@@ -1,5 +1,6 @@
 package com.application.domain;
 
+
 public class AssetInstance extends Asset {
 
 	private String serialNum;

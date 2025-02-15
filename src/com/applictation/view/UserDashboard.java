@@ -1,5 +1,6 @@
 package com.applictation.view;
 
+
 import javax.swing.*;
 
 public class UserDashboard extends JFrame {

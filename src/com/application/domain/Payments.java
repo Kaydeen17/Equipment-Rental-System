@@ -1,5 +1,6 @@
 package com.application.domain;
 
+
 import java.util.Date;
 
 public class Payments extends Invoices {

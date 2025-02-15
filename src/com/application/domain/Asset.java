@@ -1,5 +1,6 @@
 package com.application.domain;
 
+
 public class Asset {
 
 	private int asset_id;

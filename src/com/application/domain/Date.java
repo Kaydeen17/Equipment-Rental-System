@@ -1,5 +1,6 @@
 package com.application.domain;
 
+
 import java.io.Serializable; 
 
 public class Date implements Serializable {
