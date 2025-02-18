@@ -1,6 +1,5 @@
 package com.application.domain;
 
-
 import java.util.Date;
 
 public class Quotation extends Invoices{

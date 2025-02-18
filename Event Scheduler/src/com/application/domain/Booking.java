@@ -1,5 +1,6 @@
 package com.application.domain;
 
+
 public class Booking {
 	
 	private int booking_id;
