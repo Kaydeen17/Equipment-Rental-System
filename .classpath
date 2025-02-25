@@ -6,6 +6,9 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry excluding="src/|Library/|Event Scheduler/" kind="src" path=""/>
+	<classpathentry kind="src" path="Library"/>
+	<classpathentry kind="src" path="Event Scheduler"/>
 	<classpathentry kind="lib" path="C:/Users/jorda/OneDrive/Desktop/Code/mysql-connector-j-9.2.0/mysql-connector-j-9.2.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
