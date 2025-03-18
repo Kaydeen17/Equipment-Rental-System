@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class AssetsView extends JFrame {
 
-    private static final long serialVersionUID = 1L;
+        private static final long serialVersionUID = 1L;
 
     public AssetsView() {
         setTitle("Assets Management");
