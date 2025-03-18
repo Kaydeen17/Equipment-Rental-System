@@ -2,35 +2,28 @@ package com.applictation.view;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.color.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class UserDashboard extends JFrame {
+public class UserDashboard extends JInternalFrame {
 
     private static final long serialVersionUID = 1L;
 
     public UserDashboard() {
+        super("Classes", true, true, true, true); // Title, resizable, closable, maximizable, iconifiable
         setTitle("JAVA Ent. Equipment Rental Ltd.");
-        setSize(600, 400);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
-
-        // Apply a modern look and feel
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        setSize(700, 600);
 
         // Set a layout manager for the content panel
-        setLayout(new BorderLayout(10, 10));  // Add spacing between components
+        setLayout(new BorderLayout(10, 10)); // Add spacing between components
 
-        //  gradient  background fot panel
+        // Gradient background for the panel
         JPanel gradientPanel = new JPanel() {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
                 Graphics2D g2d = (Graphics2D) g;
-                GradientPaint gp = new GradientPaint(0, 0, Color.getHSBColor(180,100,100), 0, getHeight(), Color.getColor(null,new Color(255,140,0)));
+                GradientPaint gp = new GradientPaint(0, 0, new Color(135, 206, 250), 0, getHeight(), new Color(255, 140, 0)); // Light Blue to Orange Gradient
                 g2d.setPaint(gp);
                 g2d.fillRect(0, 0, getWidth(), getHeight());
             }
@@ -41,38 +34,50 @@ public class UserDashboard extends JFrame {
         // Title label
         JLabel titleLabel = new JLabel("JAVA Ent. Equipment Rental Ltd.", SwingConstants.CENTER);
         titleLabel.setFont(new Font("Verdana", Font.BOLD, 24));
-        titleLabel.setForeground(Color.WHITE);
+        titleLabel.setForeground(Color.BLACK);
         add(titleLabel, BorderLayout.NORTH);
-        titleLabel.setForeground(Color.getColor(null,Color.black));
 
         // Create a panel for buttons
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridLayout(2, 2, 10, 10));  // 2 rows, 2 columns, with spacing
+        buttonPanel.setLayout(new GridLayout(3, 2, 10, 10)); // 3 rows, 2 columns, with spacing
         buttonPanel.setOpaque(false);
-        buttonPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));  // Add padding
+        buttonPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20)); // Add padding
 
         // Create buttons
         JButton homeButton = createButton("Home (Dashboard)");
         JButton assetsButton = createButton("Assets");
-        JButton bookingsButton = createButton("Bookings ");
-        JButton InvoicesBtn = createButton("Invoices");
+        JButton bookingsButton = createButton("Bookings");
+        JButton invoicesButton = createButton("Invoices");
         JButton accManagementButton = createButton("Account Management");
-        JButton Reportingbtn = createButton("Reporting");
+        JButton reportingButton = createButton("Reporting");
 
         // Add buttons to the panel
         buttonPanel.add(homeButton);
         buttonPanel.add(assetsButton);
         buttonPanel.add(bookingsButton);
         buttonPanel.add(accManagementButton);
-        buttonPanel.add(InvoicesBtn);
-        buttonPanel.add(Reportingbtn);
+        buttonPanel.add(invoicesButton);
+        buttonPanel.add(reportingButton);
 
+        // Add action listener to the Assets button as a placeholder
+        assetsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AssetsView assetsView = new AssetsView();
 
-        // Add action listener to the Assets button to open AssetsView
-        assetsButton.addActionListener(e -> {
-            // Open AssetsView when clicked
-            new AssetsView().setVisible(true);
-            dispose();  // Close the User Dashboard after opening AssetsView
+                // Make sure the AssetsView is visible
+                assetsView.setVisible(true);
+
+                // Print a confirmation to the console
+                System.out.println("AssetsView GUI opened");
+            }
+        });
+
+        bookingsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
         });
 
         // Add the button panel to the center
@@ -81,27 +86,22 @@ public class UserDashboard extends JFrame {
         // Add a welcome message label at the bottom
         JLabel welcomeLabel = new JLabel("Welcome, User! Limited access.", SwingConstants.CENTER);
         welcomeLabel.setFont(new Font("Verdana", Font.ITALIC, 16));
-        welcomeLabel.setForeground(Color.WHITE);
+        welcomeLabel.setForeground(Color.BLACK);
         add(welcomeLabel, BorderLayout.SOUTH);
+
+        // Ensure the internal frame is visible
+        setVisible(true);
     }
 
     private JButton createButton(String text) {
         JButton button = new JButton(text);
-        button.setBackground(new Color(100, 149, 237));  // Cornflower blue
+        button.setBackground(new Color(100, 149, 237)); // Cornflower blue
         button.setForeground(Color.WHITE);
         button.setFont(new Font("Times New Roman", Font.BOLD, 14));
         button.setFocusPainted(false);
-        //button.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));  // Add padding
-        button.setBorder(BorderFactory.createLineBorder(Color.BLACK,4));
-        button.setBorderPainted(true);
-        button.setContentAreaFilled(false);  // Make button background transparent
+        button.setBorder(BorderFactory.createLineBorder(Color.BLACK, 4));
+        button.setContentAreaFilled(true);
         button.setOpaque(true);
         return button;
-
     }
-
-        public static void main(String[]args){
-            SwingUtilities.invokeLater(() -> new UserDashboard().setVisible(true));
-        }
-    }
-
+}
