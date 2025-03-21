@@ -25,11 +25,12 @@ Multi-threading – To support multiple simultaneous users.
 
 # Developers
 
-Jordan Bogle ID#: 1704233
-Alanzo ID#:
-Shemori Henry ID#:
-Elijah ID#:
-Kaydeen Walker ID#: 1902433
+*Kaydeen Walker ID#: 1902433
+*Jordan Bogle ID#: 1704233
+*Alanzo ID#:
+*Shemori Henry ID#:
+*Elijah ID#:
+*Kaydeen Walker ID#: 1902433
 
 # Project Setup & Installation 
 
