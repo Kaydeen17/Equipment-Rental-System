@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://127.0.0.1:33076/hibernateeventscheduler</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password"></property>
+
+        <!-- Choose the Hibernate dialect for the specific database type -->
+       <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+         <!-- Automatically Create Tables If Not Exist -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        
+        <property name="hibernate.hikari.maximumPoolSize">10</property>
+        
+        <property name="show_sql">true</property>
+
+        <mapping class="com.java.domain.Asset"/>
+         <mapping class="com.java.domain.Booking"/>
+        <mapping class="com.java.domain.Invoice"/>
+    </session-factory>
+</hibernate-configuration>
