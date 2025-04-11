@@ -51,7 +51,7 @@ We developed a Java-based equipment rental system for Java Entertainment to mana
 
 #### Documentation (includes ER diagrams):  `./documentation/CIT3009_Project_Documentation.pdf`
 
-#### Staff Manual: `./documentation/Java Entertainment Staff Manual.pdf`
+#### Staff Manual: `./documentation/Java_Entertainment_Staff_Manual.pdf`
 
 
 
