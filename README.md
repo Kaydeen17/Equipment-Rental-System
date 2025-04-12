@@ -49,7 +49,7 @@ We developed a Java-based equipment rental system for Java Entertainment to mana
 
 #### Project Definition: `./documentation/Project_Definition.pdf`
 
-#### Documentation (includes ER diagrams):  `./documentation/CIT3009_Project_Documentation.pdf`
+#### Documentation (includes ER diagrams):  `./documentation/CIT3009_Project.pdf`
 
 #### Staff Manual: `./documentation/Java_Entertainment_Staff_Manual.pdf`
 
