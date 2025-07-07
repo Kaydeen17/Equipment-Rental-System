@@ -35,15 +35,15 @@ We developed a Java-based equipment rental system for Java Entertainment to mana
 
 ### Developers:
 
-+ Kaydeen Walker ID#: 1902433
++ Kaydeen Walker 
 
-+ Jordan Bogle ID#: 1704233
++ Jordan Bogle
 
-+ Alanzo Harris ID#: 2210195
++ Alanzo Harris 
 
-+ Elijah Muhammad ID#: 2005032
++ Elijah Muhammad
 
-+ Shamori Henry ID#: 2100438
++ Shamori Henry
 
 
 
